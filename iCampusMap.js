@@ -361,6 +361,8 @@ jQuery(function() {
 	{label: "Ombudsman", category: ""},
 	{label: "East Lagoon", category: ""},
 	{label: "Lorusso Lagoon", category: ""},
+	{label: "Office of Student Engagement and Experiential Learning", category: ""},
+	
 	/*Food*/
 	{label: "Huskie Den", category: "Food"},
 	{label: "Blackhawk Dining Center", category: "Food"},
