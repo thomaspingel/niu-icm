@@ -436,6 +436,8 @@ function grabFirstVal(ul) {
 modified: code originally from https://github.com/derickr/osm-tools/tree/master/leaflet-nominatim-example
 OSM nominatum api has limits, MapQuest is more forgiving
 *****/
+//TJP: See http://wiki.openstreetmap.org/wiki/Nominatim#Parameters - looks like a "limit" parameter fixes this problem.
+
 function searchOSM() {
 	value = document.getElementById("searchNIU").value;	
 	if (value == "" || typeof(value) == "undefined") {
@@ -445,7 +447,8 @@ function searchOSM() {
 		clearHTML();
 		
 		//return a JSON object
-		var strAPI = "https://open.mapquestapi.com/nominatim/v1/search?&format=json";
+		//var strAPI = "http://nominatim.openstreetmap.org/search?format=json&limit=40";
+		var strAPI = "http://open.mapquestapi.com/nominatim/v1/search?&format=json&limit=100";
 		var query = "&q=" + encodeURIComponent(value);
 		//viewbox format left, top, right, bottom
 		var viewbox = "&viewbox=-88.756,41.948,-88.799,41.930&bounded=1";
